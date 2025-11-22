@@ -3,7 +3,6 @@
 // function main(config) {
 //   return config;
 // }
-
 function main(config, profileName) {
   // ============================================================
   // 0. 基础检查
@@ -300,6 +299,12 @@ function main(config, profileName) {
       "ios_rule_script",
       "rule/Clash/Telegram/Telegram_No_Resolve.yaml"
     ),
+    // ins
+    Instagram: getProvider(
+      "blackmatrix7",
+      "ios_rule_script",
+      "rule/Clash/Instagram/Instagram_No_Resolve.yaml"
+    ),
     
     // 通用分流
     // AdBlock: getProvider(
@@ -322,12 +327,39 @@ function main(config, profileName) {
       "ios_rule_script",
       "rule/Clash/Global/Global_No_Resolve.yaml"
     ),
+    Docker: getProvider(
+      "blackmatrix7",
+      "ios_rule_script",
+      "rule/Clash/Docker/Docker_No_Resolve.yaml"
+    ),
+    Notion: getProvider(
+      "blackmatrix7",
+      "ios_rule_script",
+      "rule/Clash/Notion/Notion_No_Resolve.yaml"
+    ),
+    Jetbrains: getProvider(
+      "blackmatrix7",
+      "ios_rule_script",
+      "rule/Clash/Jetbrains/Jetbrains_No_Resolve.yaml"
+    ),
+    Wiki: getProvider(
+      "blackmatrix7",
+      "ios_rule_script",
+      "rule/Clash/Wikimedia/Wikimedia_No_Resolve.yaml"
+    ),
+    Python: getProvider(
+      "blackmatrix7",
+      "ios_rule_script",
+      "rule/Clash/Python/Python_No_Resolve.yaml"
+    ),
+    
+    // 国内
     Lan: getProvider(
       "blackmatrix7",
       "ios_rule_script",
       "rule/Clash/Lan/Lan_No_Resolve.yaml"
     ),
-    // 或者改成ChinaMax,但是漏网之鱼用的直连,相当于只有写到的规则走代理(白名单模式?)
+    // 或者改成ChinaMax,但是漏网之鱼用的直连,相当于只有写到的规则走代理(黑名单模式)
     China: getProvider(
       "blackmatrix7",
       "ios_rule_script",
@@ -382,19 +414,44 @@ function main(config, profileName) {
     "RULE-SET,Microsoft,🪟 Microsoft",
     
     // Netflix
-    "RULE-SET,Netflix,🚀 节点选择",
+    "RULE-SET,Netflix,Netflix",
     // X
-    "RULE-SET,X,🚀 节点选择",
+    "RULE-SET,X,X",
     // Telegram
-    "RULE-SET,Telegram,🚀 节点选择",
+    "RULE-SET,Telegram,Telegram",
     
+    // Instagram
+    "RULE-SET,Instagram,🚀 节点选择",
+
+    // notion
+    "DOMAIN-SUFFIX,Notion,🚀 节点选择",     
+    // linuxdo
+    "DOMAIN-SUFFIX,linux.do,🚀 节点选择",
+    // reddit
+    "RULE-SET,Reddit,🚀 节点选择",
+    // huggingface
+    "DOMAIN-SUFFIX,huggingface.co,🚀 节点选择",
+    "DOMAIN-SUFFIX,hf.co,🚀 节点选择",
+    "DOMAIN-KEYWORD,huggingface,🚀 节点选择",
+
+    // docker
+    "RULE-SET,Docker,🚀 节点选择",
+    // jb
+    "RULE-SET,Jetbrains,🚀 节点选择",
+    // 维基
+    "RULE-SET,Wiki,🚀 节点选择",   
+    // speedtest
+    "RULE-SET,Speedtest,🚀 节点选择",
+
+    //python
+    "RULE-SET,Python,🚀 节点选择",    
+
+    //threads
+    "DOMAIN-SUFFIX,threads.net,🚀 节点选择",
+
     // 其它国外流量
     "RULE-SET,Global,🚀 节点选择",
     
-    // 我的规则!
-    "DOMAIN-SUFFIX,linux.do,🚀 节点选择",
-    "RULE-SET,Reddit,🚀 节点选择",
-    "RULE-SET,Speedtest,🚀 节点选择",
     // 兜底
     "MATCH,🐟 漏网之鱼"
   ];
